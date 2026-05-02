@@ -1,0 +1,29 @@
+{
+  "name": "annai-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "animejs": "^4.4.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.11.9",
+    "gsap": "^3.15.0",
+    "lucide-react": "^0.453.0",
+    "next": "14.0.0",
+    "nodemailer": "^8.0.7",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "recharts": "^2.15.4",
+    "tailwind-merge": "^2.5.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.4",
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.12",
+    "tailwindcss": "^4.2.4"
+  }
+}
