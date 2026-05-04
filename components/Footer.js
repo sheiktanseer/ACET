@@ -119,7 +119,7 @@ export default function Footer() {
         <div className="container-footer flex flex-col md:flex-row items-center justify-between gap-3 text-[11.5px] text-[var(--color-text-mid)] font-medium">
           <p>© {yr} Annai College of Engineering &amp; Technology. All Rights Reserved.</p>
           <div className="flex items-center gap-4">
-            <span className="hover:text-[var(--color-primary)] transition-colors">Designed &amp; Developed by <strong>Sheik Tanseer</strong></span>
+            <span className="hover:text-[var(--color-primary)] transition-colors">Designed &amp; Developed by <strong>Mechanical Department Alumni</strong></span>
           </div>
         </div>
       </div>
