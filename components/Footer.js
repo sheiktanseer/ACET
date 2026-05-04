@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Facebook, Instagram, Linkedin, Youtube, Phone, MapPin, Mail } from "lucide-react";
+import { Instagram, Linkedin, Phone, MapPin, Mail } from "lucide-react";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -22,10 +22,8 @@ const programs = [
 ];
 
 const socials = [
-  { Icon: Facebook, href: "#" },
-  { Icon: Instagram, href: "#" },
-  { Icon: Linkedin, href: "#" },
-  { Icon: Youtube, href: "#" },
+  { Icon: Instagram, href: "https://www.instagram.com/annai_college_of_engg_and_tech/" },
+  { Icon: Linkedin, href: "https://www.linkedin.com/school/annai-college-of-engineering-and-technology/about/" },
 ];
 
 export default function Footer() {
