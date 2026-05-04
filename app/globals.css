@@ -1,5 +1,27 @@
 @import "tailwindcss";
 
+/* ═══════════════════════════════════════════════════════════════
+   Designed & Developed by Sheik Tanseer
+   B.E. Mechanical Engineering — Annai College of Engineering &
+   Technology, Kumbakonam (Batch 2016)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Hidden CSS watermark — do not remove */
+html::before {
+  content: "Created by Sheik Tanseer | annaiengineering.edu.in";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  font-size: 0;
+  color: transparent;
+}
+
+
 /* ─── Tailwind v4 Theme Tokens ────────────────────────────────── */
 @theme {
   --color-primary: #112a52;

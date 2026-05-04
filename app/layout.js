@@ -2,6 +2,7 @@ import "./globals.css"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import GSAPProvider from "../components/GSAPProvider"
+import AdmissionPopup from "../components/AdmissionPopup"
 import { Inter, Poppins } from 'next/font/google'
 
 const inter = Inter({
@@ -21,12 +22,19 @@ const poppins = Poppins({
 export const metadata = {
   title: "ANNAI College of Engineering & Technology",
   description: "Empowering young minds with quality education, innovative ideas, futuristic development to create global leaders of tomorrow.",
+  authors: [{ name: "Sheik Tanseer" }],
+  creator: "Sheik Tanseer",
+  other: {
+    "designed-by": "Sheik Tanseer",
+    "built-by": "Sheik Tanseer — B.E. Mechanical Engineering, Annai College 2016",
+  },
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <body className="antialiased min-h-screen flex flex-col">
+        <AdmissionPopup />
         <Navbar />
         <GSAPProvider>
           <main className="flex-1">

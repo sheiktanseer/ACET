@@ -29,6 +29,9 @@ const socials = [
 ];
 
 export default function Footer() {
+
+  const yr = new Date().getFullYear();
+
   return (
     <footer className="bg-white border-t border-[var(--color-border)]">
 
@@ -114,14 +117,34 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-[var(--color-border)] py-4 bg-[var(--color-bg-page)]">
         <div className="container-footer flex flex-col md:flex-row items-center justify-between gap-3 text-[11.5px] text-[var(--color-text-mid)] font-medium">
-          <p>© 2026 Annai College of Engineering & Technology. All Rights Reserved.</p>
+          <p>© {yr} Annai College of Engineering &amp; Technology. All Rights Reserved.</p>
           <div className="flex items-center gap-4">
-            <a href="#" className="hover:text-[var(--color-primary)] transition-colors">Built by</a>
-            <span className="text-[var(--color-border)]">|</span>
-            <a href="#" className="hover:text-[var(--color-primary)] transition-colors">a Mechanical Engineering alumnus.</a>
+            <span className="hover:text-[var(--color-primary)] transition-colors">Designed &amp; Developed by <strong>Sheik Tanseer</strong></span>
           </div>
         </div>
       </div>
+
+      {/* ── Watermark: hidden from UI, present in DOM and source ── */}
+      <span
+        aria-hidden="false"
+        data-creator="Sheik Tanseer"
+        data-project="Annai College of Engineering & Technology Website"
+        style={{
+          position: "absolute",
+          width: "1px",
+          height: "1px",
+          padding: 0,
+          margin: "-1px",
+          overflow: "hidden",
+          clip: "rect(0,0,0,0)",
+          whiteSpace: "nowrap",
+          border: 0,
+          userSelect: "none",
+          pointerEvents: "none",
+        }}
+      >
+        Created by Sheik Tanseer | Annai College of Engineering &amp; Technology
+      </span>
 
     </footer>
   );
