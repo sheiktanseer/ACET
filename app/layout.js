@@ -30,18 +30,27 @@ export const metadata = {
   },
 }
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",   // enables env(safe-area-inset-*) for iPhone notch/Dynamic Island
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <body className="antialiased min-h-screen flex flex-col">
         <AdmissionPopup />
         <Navbar />
-        <GSAPProvider>
-          <main className="flex-1">
-            {children}
-          </main>
-        </GSAPProvider>
-        <Footer />
+        {/* page-wrapper clips horizontal overflow without breaking fixed navbar (Safari safe) */}
+        <div className="page-wrapper flex-1 flex flex-col">
+          <GSAPProvider>
+            <main className="flex-1">
+              {children}
+            </main>
+          </GSAPProvider>
+          <Footer />
+        </div>
       </body>
     </html>
   )

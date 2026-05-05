@@ -36,15 +36,26 @@ export default function StoryCarousel({ stories }) {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const [dragging, setDragging] = useState(false);
+  const [visible, setVisible] = useState(1);   // 1 on mobile, 2 on sm+
   const dragStartX = useRef(0);
 
-  const visible = 2;                             // 2 wide cards side-by-side
+  /* Respond to viewport width */
+  useEffect(() => {
+    const update = () => setVisible(window.innerWidth >= 640 ? 2 : 1);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
   const total = stories.length;
   const maxIndex = Math.max(0, total - visible);
 
   const clamp = (v) => Math.max(0, Math.min(v, maxIndex));
   const prev = () => setIndex(i => clamp(i - 1));
   const next = () => setIndex(i => clamp(i + 1));
+
+  /* Reset index when visible count changes */
+  useEffect(() => { setIndex(0); }, [visible]);
 
   useEffect(() => {
     if (paused || maxIndex === 0) return;

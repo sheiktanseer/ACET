@@ -189,15 +189,35 @@ p {
 
 @media (max-width: 768px) {
   .container-custom {
-    padding: 0 20px;
+    padding: 2.5rem 1.25rem;
   }
 }
 
 @media (max-width: 768px) {
   .container-custom-left {
-    padding: 0 20px;
+    padding: 2.5rem 1.25rem;
   }
 }
+
+/* Container-footer: needs horizontal padding on mobile */
+@media (max-width: 768px) {
+  .container-footer {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+/* Prevent horizontal scroll on mobile — NOT on body (breaks Safari fixed) */
+.page-wrapper {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+/* iOS smooth momentum scrolling */
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
 
 .section-py {
   padding-top: var(--section-padding-y);

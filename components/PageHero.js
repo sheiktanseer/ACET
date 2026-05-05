@@ -16,8 +16,8 @@ export default function PageHero({ title, subtitle, bgImage = "/img/main-banner.
 
   return (
     <section
-      className="relative w-full flex items-center overflow-hidden pt-20"
-      style={{ minHeight: "320px" }}
+      className="relative w-full flex items-center overflow-hidden pt-14 lg:pt-20"
+      style={{ minHeight: "280px" }}
     >
       {/* Background photo */}
       <div

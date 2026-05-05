@@ -30,19 +30,22 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-[var(--shadow-nav)] py-2" : "bg-white py-3"
-          }`}
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+          isScrolled ? "bg-white/95 backdrop-blur-md shadow-[var(--shadow-nav)] py-1" : "bg-white py-2"
+        }`}
+        style={{ paddingLeft: "env(safe-area-inset-left)", paddingRight: "env(safe-area-inset-right)" }}
       >
-        <div className="w-full px-4">
+        <div className="w-full px-4 md:px-6">
           {/* Three-column layout: Logo | Nav | CTA */}
-          <div className="flex items-center">
+          <div className="flex items-center justify-between w-full">
 
-            {/* LEFT — Logo (bigger) */}
-            <Link href="/" className="flex items-center gap-3 shrink-0 mr-8">
+            {/* LEFT — Logo */}
+            <Link href="/" className="flex items-center gap-3 shrink-0">
               <img
                 src="/img/logo.png"
                 alt="ANNAI College of Engineering & Technology"
-                className="h-20 w-auto object-contain"
+                className="h-10 w-auto max-w-[130px] sm:h-12 sm:max-w-[160px] lg:h-20 lg:max-w-[260px] object-contain block"
+                style={{ maxWidth: "min(130px, 35vw)" }}
               />
             </Link>
 
@@ -67,7 +70,7 @@ export default function Navbar() {
             </nav>
 
             {/* RIGHT — Apply Now CTA + Mobile toggle */}
-            <div className="flex items-center gap-3 ml-8 shrink-0">
+            <div className="flex items-center gap-3 shrink-0">
               <Link
                 href="/contact"
                 className="hidden lg:inline-flex btn-primary group items-center gap-2"
@@ -76,12 +79,15 @@ export default function Navbar() {
                 <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
 
+              {/* Hamburger — 44×44 min touch target (Apple HIG) */}
               <button
-                className="lg:hidden text-[var(--color-primary)] p-1.5"
+                className="lg:hidden flex items-center justify-center text-[var(--color-primary)] rounded-lg"
+                style={{ minWidth: "44px", minHeight: "44px", WebkitTapHighlightColor: "transparent" }}
                 onClick={() => setMobileMenuOpen(true)}
-                aria-label="Open menu"
+                aria-label="Open navigation menu"
+                type="button"
               >
-                <Menu size={26} />
+                <Menu size={24} strokeWidth={2} />
               </button>
             </div>
 

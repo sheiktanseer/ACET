@@ -57,10 +57,10 @@ export default function AdmissionPopup() {
             }}
           >
             {/* ── LAYOUT: left content + right photo ── */}
-            <div className="flex min-h-[320px]">
+            <div className="flex flex-col sm:flex-row min-h-[280px]">
 
               {/* ═══ LEFT CONTENT PANEL ═══ */}
-              <div className="relative z-10 flex flex-col justify-between px-9 py-8 flex-1 min-w-0">
+              <div className="relative z-10 flex flex-col justify-between px-5 sm:px-9 py-6 sm:py-8 flex-1 min-w-0">
 
                 {/* 2026-27 pill — top right */}
                 <div className="flex items-start justify-between mb-5">

@@ -75,7 +75,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           1. HERO
       ═══════════════════════════════════════════ */}
-      <section className="relative w-full min-h-[660px] lg:h-[740px] flex items-center bg-[#e8eff8] overflow-hidden pt-20">
+      <section className="relative w-full min-h-[500px] lg:h-[740px] flex items-center bg-[#e8eff8] overflow-hidden pt-14 lg:pt-20">
 
         {/* Background photo – right side */}
         <div
@@ -193,7 +193,7 @@ export default function Home() {
           {/* ── ROW 1: All 5 programs in one row ── */}
           <motion.div
             variants={sc} initial="hidden" whileInView="show" viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-14"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-14"
           >
             {programs.map((prog, idx) => (
               <motion.div key={idx} variants={si} className="flex flex-col group card p-0">
